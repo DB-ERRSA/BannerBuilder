@@ -1,0 +1,80 @@
+banner:
+  # If true, no plugin-defined pattern maximum is applied.
+  infinite-patterns: false
+
+  # Used when infinite-patterns is false.
+  max-patterns: 16
+
+pricing:
+  enabled: true
+
+  # Options:
+  #
+  # VANILLA_PLUS:
+  # The first six total layers are free.
+  # Only newly added layers beyond six cost money.
+  #
+  # FREE_UNTIL_LIMIT:
+  # Uses free-layers instead of six.
+  mode: VANILLA_PLUS
+
+  # Used only by FREE_UNTIL_LIMIT.
+  free-layers: 3
+
+  money:
+    enabled: false
+    cost-per-paid-layer: 50.0
+
+materials:
+  enabled: true
+
+  # Dyes are normally consumed when adding a layer.
+  consume-dyes: true
+
+  # Vanilla looms require special pattern items but do not consume them.
+  # Change this to true if Loom+ should consume the scroll.
+  consume-pattern-items: false
+
+reset:
+  enabled: true
+
+  money:
+    enabled: false
+    cost: 25.0
+
+  materials:
+    require-base-color-dye: true
+    consume-base-color-dye: true
+
+discounts:
+  ranks:
+    vip:
+      permission: "bannerbuilder.discount.vip"
+      percent-off: 10
+
+    mvp:
+      permission: "bannerbuilder.discount.mvp"
+      percent-off: 25
+
+    admin:
+      permission: "bannerbuilder.discount.admin"
+      percent-off: 100
+
+loom-link:
+  enabled: true
+
+  # Normal right-click opens the vanilla loom.
+  # Sneak + right-click opens Loom+.
+  require-sneak: true
+
+  # Tell a player about Loom+ whenever they place a loom.
+  notify-on-place: true
+
+# Bedrock Edition cannot render banner layers past 6 through Geyser.
+# Java players still use banner.max-patterns above.
+bedrock:
+  max-visible-layers: 6
+
+messages:
+  # Matches the transaction-message structure used by PlayerQuests.
+  prefix: "&8[&bLoom+&8] &7"

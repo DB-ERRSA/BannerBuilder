@@ -1,0 +1,33 @@
+name: BannerBuilder
+version: 1.0.0
+main: com.errsa.bannerbuilder.BannerBuilderPlugin
+api-version: '1.21'
+
+softdepend:
+  - Vault
+
+commands:
+  bannerbuilder:
+    aliases:
+      - bbanner
+      - bannershop
+      - loomplus
+    description: Opens the Loom+ banner builder.
+    usage: /bannerbuilder
+
+permissions:
+  bannerbuilder.use:
+    description: Allows use of the Loom+ banner builder.
+    default: true
+
+  bannerbuilder.discount.vip:
+    description: VIP Loom+ discount permission.
+    default: false
+
+  bannerbuilder.discount.mvp:
+    description: MVP Loom+ discount permission.
+    default: false
+
+  bannerbuilder.discount.admin:
+    description: Administrative Loom+ discount permission.
+    default: false
